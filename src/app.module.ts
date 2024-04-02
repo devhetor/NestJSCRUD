@@ -5,8 +5,13 @@ import { CarCategoriesModule } from './carCategory/carCategory.module';
 import { CustomersModule } from './customer/customer.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest'), CarsModule,  CarCategoriesModule, CustomersModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost:27017/'),
+    CarsModule,
+    CarCategoriesModule,
+    CustomersModule
+  ],
   providers: [],
   controllers: []
 })
-export class AppModule {}
+export class AppModule { }
