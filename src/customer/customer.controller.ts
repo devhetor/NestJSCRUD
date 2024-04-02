@@ -3,7 +3,9 @@ import { CustomersService } from './customer.service';
 import { Customer } from './customer.schema';
 import { CreateCustomerDto } from './dto/customer.createDto';
 import { UpdateCustomerDto } from './dto/customer.updateDto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Customerss')
 @Controller('customers')
 export class CustomersController {
     constructor(private readonly customersService: CustomersService) { }

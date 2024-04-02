@@ -3,7 +3,9 @@ import { CarCategoriesService } from './carCategory.service';
 import { CarCategory } from './carCategory.schema';
 import { CreateCarCategoryDto } from './dto/carCategory.createDto';
 import { UpdateCarCategoryDto } from './dto/carCategory.updateDto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Car categories')
 @Controller('carCategories')
 export class CarCategoriesController {
     constructor(private readonly carCategoriesService: CarCategoriesService) { }
