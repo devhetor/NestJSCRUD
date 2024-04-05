@@ -10,7 +10,7 @@ export class CarsService {
     constructor(@InjectModel(Car.name) private carModel: Model<Car>) { }
 
     async findAll(): Promise<Car[]> {
-        return await this.carModel.find().exec()
+        return await this.carModel.find()
     }
 
     async findById(id: string): Promise<Car> {
